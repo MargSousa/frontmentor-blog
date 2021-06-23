@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | [Blogr]</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="navbar bottom-border">
+    <div class="navbar-pattern">
+
+      <!-- DESKTOP MENU -->
+
+      <div id="navbar-desktop" class="navbar-desktop">
+        <div class="navbar-menu">
+          <img class="logo" src="./images/logo.svg" />
+          <ul class="nav-main">
+            <li>
+              <div class="nav-subject" id="product" onclick="openDesktopMenu(event)">
+                <div id="product-tab" class="nav-tab">Product</div>
+                <div id="product-icon" class="nav-icon"></div>
+              </div>
+              <ul id="product-menu" class="nav-menu hidden">
+                <li class="nav-feature">Overview</li>
+                <li class="nav-feature">Pricing</li>
+                <li class="nav-feature">Marketplace</li>
+                <li class="nav-feature">Features</li>
+                <li class="nav-feature">Integrations</li>
+              </ul>
+            </li>
+            <li>
+              <div class="nav-subject" id="company" onclick="openDesktopMenu(event)">
+                <div id="company-tab" class="nav-tab">Company</div>
+                <div id="company-icon" class="nav-icon"></div>
+              </div>
+              <ul id="company-menu" class="nav-menu hidden">
+                <li class="nav-feature">Overview</li>
+                <li class="nav-feature">Pricing</li>
+                <li class="nav-feature">Marketplace</li>
+                <li class="nav-feature">Features</li>
+                <li class="nav-feature">Integrations</li>
+              </ul>
+            </li>
+            <li>
+              <div class="nav-subject" id="connect" onclick="openDesktopMenu(event)">
+                <div id="connect-tab" class="nav-tab">Connect</div>
+                <div id="connect-icon" class="nav-icon"></div>
+              </div>
+              <ul id="connect-menu" class="nav-menu hidden">
+                <li class="nav-feature">Contact</li>
+                <li class="nav-feature">Newsletter</li>
+                <li class="nav-feature">LinkedIn</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-menu">
+          <div class="nav-subject subject-login">
+            <div class="nav-tab">Login</div>
+          </div>
+          <div class="btn white-btn signup-btn">
+            <a class="nav-link" href="#">Sign Up</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU -->
+
+      <div id="navbar-mobile" class="navbar-mobile">
+
+        <div class="navbar-mobile-header">
+          <img class=" logo" src="./images/logo.svg" />
+          <div id="mobile-icon" class="burger-icon" onclick="openBurgerMenu(event)"></div>
+        </div>
+        <div id="navbar-mobile-menu" class="navbar-mobile-menu">
+          <ul class="mobile-main">
+            <li>
+              <div class="mobile-subject" id="product" onclick="openMobMenu(event)">
+                <div id="product-tab" class="mobile-tab">Product</div>
+                <div id="product-mobile-icon" class="mobile-icon"></div>
+              </div>
+              <ul id="product-mobile-menu" class="mobile-menu hidden">
+                <li class="mobile-feature">Overview</li>
+                <li class="mobile-feature">Pricing</li>
+                <li class="mobile-feature">Marketplace</li>
+                <li class="mobile-feature">Features</li>
+                <li class="mobile-feature">Integrations</li>
+              </ul>
+            </li>
+            <li>
+              <div class="mobile-subject" id="company" onclick="openMobMenu(event)">
+                <div id="company-tab" class="mobile-tab">Company</div>
+                <div id="company-mobile-icon" class="mobile-icon"></div>
+              </div>
+              <ul id="company-mobile-menu" class="mobile-menu hidden">
+                <li class="mobile-feature">Overview</li>
+                <li class="mobile-feature">Pricing</li>
+                <li class="mobile-feature">Marketplace</li>
+                <li class="mobile-feature">Features</li>
+                <li class="mobile-feature">Integrations</li>
+              </ul>
+            </li>
+            <li>
+              <div class="mobile-subject" id="connect" onclick="openMobMenu(event)">
+                <div id="connect-tab" class="mobile-tab">Connect</div>
+                <div id="connect-mobile-icon" class="mobile-icon"></div>
+              </div>
+              <ul id="connect-mobile-menu" class="mobile-menu hidden">
+                <li class="mobile-feature">Contact</li>
+                <li class="mobile-feature">Newsletter</li>
+                <li class="mobile-feature">LinkedIn</li>
+              </ul>
+            </li>
+            <hr class="mobile-division">
+            <div class="mobile-subject">
+              <div class="mobile-tab">Login</div>
+            </div>
+            <li>
+              <div class="btn red-btn signup-btn">
+                <a class="nav-link" href="#">Sign Up</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- HEADER -->
+
+      <div class="header">
+        <div class="header-title">
+          A modern publishing platform
+        </div>
+        <div class="header-text">
+          Grow your audience and build your online brand
+        </div>
+        <div class="header-btn">
+          <button class="btn white-btn large-btn">Start for Free</button>
+          <button class="btn transparent-btn large-btn">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="topics-main-title title">Designed for the future</div>
+    <div class="topics topics-one">
+      <div class="topics-info">
+        <div class="topics-title title">Introducing an extensible editor</div>
+        <div class="topics-text text">
+          Blogr features an exceedingly intuitive interface which lets you focus on one thing:
+          creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such
+          as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality
+          or change the looks of a blog.
+        </div>
+        <div class="topics-title title">Robust content management</div>
+        <div class="topics-text text">
+          Flexible content management enables users to easily move through posts. Increase the
+          usability of your blog by adding customized categories, sections, format, or flow. With this functionality,
+          you’re in full control.
+        </div>
+      </div>
+
+      <div class="topics-img">
+        <img class="topics-editor" src="./images/illustration-editor-desktop.svg" />
+        <img class="topics-editor-mobile" src="./images/illustration-editor-mobile.svg" />
+      </div>
+    </div>
+  </section>
+
+  <section class="state top-border bottom-border">
+    <div class="state-img">
+      <img class="phones-img" src="./images/illustration-phones.svg" />
+
+    </div>
+    <div class="state-main">
+      <div class="side-info">
+        <div class="state-title">State of the Art Infrastructure</div>
+        <div class="state-text">
+          With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="topics topics-two">
+    <div class="topics-img">
+      <img class="topics-laptop" src="./images/illustration-laptop-desktop.svg" />
+      <img class="topics-laptop-mobile" src="./images/illustration-laptop-mobile.svg" />
+    </div>
+    <div class="topics-info">
+      <div class="topics-title title">Free, open, simple</div>
+      <div class="topics-text text">
+        Blogr is a free and open source application backed by a large community of helpful developers. It supports
+        features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+        and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+      </div>
+      <div class="topics-title title">Powerful tooling</div>
+      <div class="topics-text text">
+        Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a
+        breeze, but capable of producing even the most complicated sites.
+      </div>
+    </div>
+  </section>
+
+  <footer class="top-border">
+    <div>
+      <img class="footer-logo" src="./images/logo.svg" />
+    </div>
+    <div>
+      <div class="footer-title">Product</div>
+      <div class="footer-text">Overview</div>
+      <div class="footer-text">Pricing</div>
+      <div class="footer-text">Marketplace</div>
+      <div class="footer-text">Features</div>
+      <div class="footer-text">Integrations</div>
+    </div>
+    <div>
+      <div class="footer-title">Company</div>
+      <div class="footer-text">Team</div>
+      <div class="footer-text">Blog</div>
+      <div class="footer-text">Careers</div>
+    </div>
+    <div>
+      <div class="footer-title">Connect</div>
+      <div class="footer-text">Contact</div>
+      <div class="footer-text">Newsletter</div>
+      <div class="footer-text">LinkedIn</div>
+    </div>
+  </footer>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Margarida Sousa</a>.
+  </div>
+
+  <script>
+    let mobileMenu = document.getElementById('navbar-mobile-menu');
+    let mobileMenuIcon = document.getElementById('mobile-icon');
+    let productMobMenu = document.getElementById('product-mobile-menu');
+    let companyMobMenu = document.getElementById('company-mobile-menu');
+    let connectMobMenu = document.getElementById('connect-mobile-menu');
+    let productDeskMenu = document.getElementById('product-menu');
+    let companyDeskMenu = document.getElementById('company-menu');
+    let connectDeskMenu = document.getElementById('connect-menu');
+    let productDeskIcon = document.getElementById('product-icon');
+    let companyDeskIcon = document.getElementById('company-icon');
+    let connectDeskIcon = document.getElementById('connect-icon');
+    let productMobIcon = document.getElementById('product-mobile-icon');
+    let companyMobIcon = document.getElementById('company-mobile-icon');
+    let connectMobIcon = document.getElementById('connect-mobile-icon');
+
+    function openBurgerMenu() {
+      if (mobileMenuIcon.classList.contains('burger-icon')) {
+        mobileMenuIcon.classList.remove('burger-icon');
+        mobileMenuIcon.classList.add('close-icon');
+        mobileMenu.classList.add('active');
+
+      } else {
+        mobileMenuIcon.classList.remove('close-icon');
+        mobileMenuIcon.classList.add('burger-icon');
+        mobileMenu.classList.remove('active');
+      }
+    }
+
+    function openMobMenu(event) {
+      const id = event.target.id;
+      console.log(id)
+
+      if (id.includes("product") && productMobMenu.classList.contains('hidden')) {
+        productMobIcon.classList.add('rotate-icon');
+        productMobMenu.classList.add('active');
+        productMobMenu.classList.remove('hidden');
+        companyMobIcon.classList.remove('rotate-icon');
+        companyMobMenu.classList.remove('active');
+        companyMobMenu.classList.add('hidden');
+        connectMobIcon.classList.remove('rotate-icon');
+        connectMobMenu.classList.remove('active');
+        connectMobMenu.classList.add('hidden');
+
+      } else if (id.includes("company") && companyMobMenu.classList.contains('hidden')) {
+        productMobIcon.classList.remove('rotate-icon');
+        productMobMenu.classList.remove('active');
+        productMobMenu.classList.add('hidden');
+        companyMobIcon.classList.add('rotate-icon');
+        companyMobMenu.classList.add('active');
+        companyMobMenu.classList.remove('hidden');
+        connectMobIcon.classList.remove('rotate-icon');
+        connectMobMenu.classList.remove('active');
+        connectMobMenu.classList.add('hidden');
+
+      } else if (id.includes("connect") && connectMobMenu.classList.contains('hidden')) {
+        productMobIcon.classList.remove('rotate-icon');
+        productMobMenu.classList.remove('active');
+        productMobMenu.classList.add('hidden');
+        companyMobIcon.classList.remove('rotate-icon');
+        companyMobMenu.classList.remove('active');
+        companyMobMenu.classList.add('hidden');
+        connectMobIcon.classList.add('rotate-icon');
+        connectMobMenu.classList.add('active');
+        connectMobMenu.classList.remove('hidden');
+
+      } else {
+        companyMobIcon.classList.remove('rotate-icon');
+        companyMobMenu.classList.remove('active');
+        companyMobMenu.classList.add('hidden');
+        productMobIcon.classList.remove('rotate-icon');
+        productMobMenu.classList.remove('active');
+        productMobMenu.classList.add('hidden');
+        connectMobIcon.classList.remove('rotate-icon');
+        connectMobMenu.classList.remove('active');
+        connectMobMenu.classList.add('hidden');
+      }
+    }
+
+    function openDesktopMenu(event) {
+      const id = event.target.id;
+
+      if (id.includes("product") && productDeskMenu.classList.contains('hidden')) {
+        productDeskIcon.classList.add('rotate-icon');
+        productDeskMenu.classList.add('active');
+        productDeskMenu.classList.remove('hidden');
+        companyDeskIcon.classList.remove('rotate-icon');
+        companyDeskMenu.classList.remove('active');
+        companyDeskMenu.classList.add('hidden');
+        connectDeskIcon.classList.remove('rotate-icon');
+        connectDeskMenu.classList.remove('active');
+        connectDeskMenu.classList.add('hidden');
+
+      } else if (id.includes("company") && companyDeskMenu.classList.contains('hidden')) {
+        productDeskIcon.classList.remove('rotate-icon');
+        productDeskMenu.classList.remove('active');
+        productDeskMenu.classList.add('hidden');
+        companyDeskIcon.classList.add('rotate-icon');
+        companyDeskMenu.classList.add('active');
+        companyDeskMenu.classList.remove('hidden');
+        connectDeskIcon.classList.remove('rotate-icon');
+        connectDeskMenu.classList.remove('active');
+        connectDeskMenu.classList.add('hidden');
+
+      } else if (id.includes("connect") && connectDeskMenu.classList.contains('hidden')) {
+        productDeskIcon.classList.remove('rotate-icon');
+        productDeskMenu.classList.remove('active');
+        productDeskMenu.classList.add('hidden');
+        productDeskIcon.classList.remove('rotate-icon');
+        companyDeskMenu.classList.remove('active');
+        companyDeskMenu.classList.add('hidden');
+        connectDeskIcon.classList.add('rotate-icon');
+        connectDeskMenu.classList.add('active');
+        connectDeskMenu.classList.remove('hidden');
+
+      } else {
+        companyDeskIcon.classList.remove('rotate-icon');
+        companyDeskMenu.classList.remove('active');
+        companyDeskMenu.classList.add('hidden');
+        productDeskIcon.classList.remove('rotate-icon');
+        productDeskMenu.classList.remove('active');
+        productDeskMenu.classList.add('hidden');
+        connectDeskIcon.classList.remove('rotate-icon');
+        connectDeskMenu.classList.remove('active');
+        connectDeskMenu.classList.add('hidden');
+      }
+    }
+
+  </script>
+</body>
+
+</html>
